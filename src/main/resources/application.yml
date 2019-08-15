@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: school config server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/shaiksarpa/school-config.git
+          skip-ssl-validation: true
+          username: shaiksarpa
+          password: P@ssw0rd
+          search-paths:
+          - '{application}'
+server:
+  port: ${PORT}
